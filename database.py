@@ -71,6 +71,14 @@ def export_to_csv():
         log("ERROR", f"Erro ao exportar CSV: {e}")
 
 
+def delete_user_data(user_id):
+    """Apaga todos os registros de um usuário específico"""
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM interactions WHERE user_id = ?", (user_id,))
+    conn.commit()
+    conn.close()
+
 def export_to_html():
     """Gera um relatório visual em HTML que abre no navegador"""
     try:

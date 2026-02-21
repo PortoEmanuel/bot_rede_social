@@ -8,6 +8,12 @@ Este é um bot de atendimento integrado com a API da Meta (Facebook/Messenger), 
 - **Relatórios Inteligentes**: Gera relatórios sob demanda em formatos **CSV** (dados) e **HTML** (visual/dashboard).
 - **Banco de Dados**: Armazenamento local leve utilizando SQLite3.
 
+## ⚖️ Conformidade com a LGPD
+Este projeto foi desenvolvido respeitando os princípios da **Lei Geral de Proteção de Dados**:
+- **Finalidade**: Os dados são coletados exclusivamente para fins de atendimento e geração de relatórios de desempenho do bot.
+- **Transparência**: O banco de dados armazena apenas `user_id`, `user_name` e o conteúdo das mensagens.
+- **Segurança**: Os dados sensíveis e o banco de dados não são compartilhados em repositórios públicos (configurado via `.gitignore`).
+
 ## 🛠️ Tecnologias Utilizadas
 - **Linguagem**: Python 3.11+
 - **Framework**: Flask
